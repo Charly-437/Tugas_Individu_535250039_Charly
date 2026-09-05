@@ -1,0 +1,140 @@
+html {
+    scroll-behavior: smooth; /* Efek smooth saat nav diklik */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #A9D6E5;
+    color: #333333;
+}
+
+/* Header */
+header {
+    padding: 30px;
+    text-align: center;
+    background-color: #012A4A;
+    color: #ffffff;
+}
+
+/* Navigasi */
+nav {
+    padding: 15px;
+    text-align: center;
+    background-color: #01497C;
+    position: sticky;
+    top: 0; /* Nav tetep berada di atas saat di scroll*/
+    z-index: 100;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* efek halus saat kursor diarahkan*/
+}
+
+nav a:hover {
+    color: #89C2D9;
+}
+
+/* Konten Utama */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* Styling tiap artikel menjadi potongan kartu berwarna putih */
+article {
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(1, 42, 74, 0.15); /* efek bayangan */
+}
+
+article h2 {
+    color: #013A63;
+    border-bottom: 2px solid #61A5C2;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+/* Styling untuk merapikan sub judul */
+article h3 {
+    color: #014F86;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Styling untuk membuat biodata sejajar kiri kanan */
+.biodata {
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex; /* agar baris tersusun sejajar */
+    margin-bottom: 8px;
+}
+
+.label {
+    width: 140px; /* lebar tetap untuk label kiri */
+    font-weight: bold;
+    color: #013A63;
+}
+
+.colon {
+    width: 15px; 
+    font-weight: bold;
+}
+
+.value {
+    flex: 1; /* Mengisi sisa ruang di sebelah kanan */
+}
+
+/* Link */
+article a {
+    color: #2A6F97;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    text-decoration: underline;
+    color: #012A4A;
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #012A4A;
+    color: #ffffff;
+    margin-top: 40px;
+}
+
+/* Aturan khusus untuk ukuran layar hp */
+@media (max-width: 500px) {
+    /* Header versi mobile */
+    header {
+        padding: 20px 10px;
+    }
+
+    /* Jarak nav dirapatkan agar tidak terpotong */
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    /* Padding card dikecilkan */
+    article {
+        padding: 15px 15px;
+    }
+
+    /* Lebar label biodata disesuaikan sama layar hp */
+    .label {
+        width: 110px;
+    }
+}
