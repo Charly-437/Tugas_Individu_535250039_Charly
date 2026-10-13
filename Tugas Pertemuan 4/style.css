@@ -1,0 +1,207 @@
+html {
+    scroll-behavior: smooth; /* Efek smooth saat nav diklik */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #A9D6E5;
+    color: #333333;
+}
+
+/* Header */
+header {
+    padding: 30px;
+    text-align: center;
+    background-color: #012A4A;
+    color: #ffffff;
+}
+
+/* Navigasi */
+nav {
+    padding: 15px;
+    text-align: center;
+    background-color: #01497C;
+    position: sticky; 
+    top: 0; /* nav tetep berada di atas saat di scroll*/
+    z-index: 100;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* efek halus saat kursor diarahkan*/
+}
+
+nav a:hover {
+    color: #89C2D9;
+}
+
+/* Konten Utama */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* Styling tiap artikel menjadi potongan kartu berwarna putih */
+article {
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(1, 42, 74, 0.15); /* efek bayangan */
+}
+
+article h2 {
+    color: #013A63;
+    border-bottom: 2px solid #61A5C2;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+/* Styling untuk merapikan sub judul */
+article h3 {
+    color: #014F86;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Kartu profil */
+.profile-card {
+    margin-top: 20px;
+}
+
+/* Bagian atas: foto dan biodata (kiri kanan) */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.profile-photo img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #226481;
+    flex-shrink: 0; /* antisipasi foto gepeng saat area menyempit */
+}
+
+.biodata {
+    flex: 1;
+}
+
+.row {
+    display: flex;  /* agar baris tersusun sejajar */
+    margin-bottom: 8px;
+}
+
+.label {
+    width: 130px; /* lebar tetap untuk label kiri */
+    font-weight: bold;
+    color: #013A63;
+}
+
+.colon {
+    width: 15px;
+    font-weight: bold;
+}
+
+.value {
+    flex: 1; /* Mengisi sisa ruang di sebelah kanan */
+}
+
+/* Bagian bawah: deskripsi singkat */
+.profile-desc {
+    padding-top: 0;
+}
+
+/* Link */
+article a {
+    color: #2A6F97;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    text-decoration: underline;
+    color: #012A4A;
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #012A4A;
+    color: #ffffff;
+    margin-top: 40px;
+}
+
+/* Media Queries */
+/* Breakpoint 1: Tablet */
+@media (max-width: 768px) {
+    /* header versi tablet */
+    .profile-header {
+        /* sesuaikan jarak foto & teks agar muat di layar tablet */
+        gap: 20px;
+    }
+
+    .label {
+        width: 100px;
+    }
+}
+
+/* Breakpoint 2: Mobile/Hp */
+@media (max-width: 500px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    /* Navbar dibuat tetap berjejer kiri kanan */
+    nav {
+        display: flex;
+        justify-content: center; /* Posisi menu rata tengah */
+        align-items: center;
+        gap: 12px; /* Jarak antar navigasi*/
+        padding: 12px 8px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 12px; /* Ukuran teks sedikit diperkecil agar pas */
+        white-space: nowrap; /* Mencegah teks patah/turun ke baris baru */
+    }
+
+    article {
+        padding: 15px;
+    }
+
+    /* Foto dan biodata posisinya atas bawah agar tampilan lebih rapi */
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .row {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .profile-photo img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .label {
+        width: 90px;
+        font-size: 14px;
+    }
+
+    .value {
+        font-size: 14px;
+    }
+}
